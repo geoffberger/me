@@ -30,11 +30,16 @@ html {font:20px/28px Helvetica, Arial, sans-serif; color:#454545;}
 body {margin:70px auto 0; width:650px;}
 h1 {font:bold 56px LiberationSerif-Regular, Palatino Linotype, Book Antiqua, serif; text-shadow:2px 2px 2px #ddd; word-spacing:-6px; letter-spacing:-1px;}
 p {margin:14px 0;}
-ul {margin-left:18px;}
-li {margin:6px 0;}
-a {color:#1E6984; -webkit-transition:background .2s linear; -webkit-transition:color .2s linear;}
+ul {margin-left:18px; list-style:none;}
+li {margin:6px 0; list-style:disc;}
+li:hover {margin:6px 0; list-style:none;}
+li:hover:before {background:#454545;  border-radius:10px; content:""; display:inline-block; height:9px; left:-20px; margin-right:-9px; position:relative; top:-1px; width:9px;}
+a {color:#1E6984;
+  -webkit-transition:background .2s linear; -webkit-transition:color .2s linear;
+  -moz-transition:background .2s linear; -moz-transition:color .2s linear;
+}
+a:visited {color: #365864;}
 a:hover {background:#1E6984; color:#fff; text-decoration:none;}
-/* color alternative: #365864 */
 a[href$="pdf"]:after {content:" (pdf)";}
 b {font-style:italic; font-weight:bold;}
 em {font-style:italic;}
